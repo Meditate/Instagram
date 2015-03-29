@@ -18,9 +18,11 @@
       </div>
       <div id="bot_side">
         <ul>
+          <li><%=link_to "Home", root_path %></li>
           <li><%=link_to "New pic", new_post_path %></li>
-          <li><%=link_to "Log out", new_post_path %></li>
+          <li><%=link_to "Log out", destroy_user_session_path, :method => :delete %></li>
         </ul>
+        <div id="notice" style="left:1em;"><%= notice %></div>
       </div>
     </div>
     <div id="wrap" style="margin-left: 250px;">
@@ -30,9 +32,13 @@
 <% if !user_signed_in?%>
     <div id="wrap">
         <div id="header">
+            <div id="notice" style="top:.6em; left:.6em; color:white"><%= notice %></div>
+            <div id="logo">
+                <%=link_to "Instagram", root_path, class: "logo" %>
+            </div>
             <div id="authentication">
-                <%=link_to "Log In", new_post_path, class:'authenticate' %>
-                <%=link_to "Sign Up", new_post_path, class:'authenticate'%>
+                <%=link_to "Sign In", user_session_path,:method => :post, class:'authenticate' %>
+                <%=link_to "Sign Up", new_user_registration_path, class:'authenticate'%>
             </div>
         </div>
         <%= yield %>
