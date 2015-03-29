@@ -35,7 +35,7 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

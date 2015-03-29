@@ -15,3 +15,119 @@
  */
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'normalize';
+
+body {
+  margin: 0;
+  background-color: #F7F7F7;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#sidebar{
+  position:fixed;
+  height: 100%;
+  width:250px;
+  border-right: 1px solid #d6dce0;
+  #top_side{
+    height:auto;
+    background-color: #A2B5CD;
+    border-bottom: 2px dashed #4F94CD;
+    #photo{
+      width:100px;
+      height: 100px;
+      position:absolute;
+      background-color: lavender;
+      top:2em;
+      left:28%;
+      border-radius: 100%;
+      background: url(http://torrancecrossfit.com/wp-content/uploads/2014/06/eric_masukawame-com.jpeg);
+      background-size: cover;
+    }
+    #about{
+      padding:60% 1em 1em 2em;
+      color: whitesmoke;
+      font-size: 1em;
+    }
+  }
+  #bot_side{
+    background-color: #E8E8E8;
+    height: 100%;
+    padding-top: 7em;
+    line-height: 3em;
+    ul{
+      padding-left: 1em;
+      padding-right: 1em;
+      list-style: none;
+      li{
+        padding-left: 1em;
+        padding-right: 1em;
+        border-bottom: 1px solid #d6dce0;
+      }
+      a{
+        font-size: 1.3em;
+        color: #9eafba;
+        transition: all .4s ease;;
+        &:hover{
+          text-decoration: none;
+          color: #33acb7;
+        }
+      }
+    }
+  }
+}
+#wrap{
+  margin-top: 3.7em;
+
+  #header{
+    padding:.2em;
+    top:0;
+    width:100%;
+    position:fixed;
+    border-bottom: 1px solid #d6dce0;
+    background: #f5f7f9;
+  }
+  #authentication{
+    float:right;
+    margin:.6em;
+    font-size: 1.2em;
+    .authenticate{
+      margin-right:.8em;
+      color:#d6dce0;
+    }
+    .authenticate:hover{
+      color: darkturquoise;
+      text-decoration: none;
+    }
+  }
+  .container{
+    width:400px;
+    background-color: #ffffff;
+    padding:0;
+    margin:1em auto;
+    border-radius: 3px;
+    box-shadow: 0 0 5px -3px;
+    .user_id{
+      background-color: #A2B5CD;
+      border-radius: 3px 3px 0px 0px;
+      height:20px;
+    }
+    .post {
+      margin:0px 0px 50px 0px;
+      .photo{
+      }
+      .description{
+        margin:.5em .5em;
+        width:400px;
+      }
+    }
+    .commands{
+      padding:.2em;
+      text-align: right;
+      font-family: 'Raleway', sans-serif;
+      border-top:1px solid #d6dce0;
+    }
+  }
+}
