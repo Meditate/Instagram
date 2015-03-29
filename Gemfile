@@ -47,5 +47,6 @@ group :development, :test do
   gem 'autoprefixer-rails'
   gem 'bootstrap-sass'
   gem 'carrierwave'
+  gem 'devise', :git => 'https://github.com/plataformatec/devise.git', :branch => 'lm-rails-4-2'
 end
 

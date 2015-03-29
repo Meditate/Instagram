@@ -7,31 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<div id="sidebar">
-  <div id="top_side">
-    <div id="photo">
-    </div>
-    <div id="about">
-      Roof party Banksy Brooklyn tofu small
-    </div>
-  </div>
-  <div id="bot_side">
-    <ul>
-      <li><%=link_to "New pic", new_post_path %></li>
-      <li><%=link_to "Log out", new_post_path %></li>
-    </ul>
-  </div>
-</div>
-
-<div id="wrap">
-    <div id="header">
-        <div id="authentication">
-            <%=link_to "Log In", new_post_path, class:'authenticate' %>
-            <%=link_to "Sign Up", new_post_path, class:'authenticate'%>
+<% if user_signed_in? %>
+    <div id="sidebar">
+      <div id="top_side">
+        <div id="photo">
         </div>
+        <div id="about">
+          Roof party Banksy Brooklyn tofu small
+        </div>
+      </div>
+      <div id="bot_side">
+        <ul>
+          <li><%=link_to "New pic", new_post_path %></li>
+          <li><%=link_to "Log out", new_post_path %></li>
+        </ul>
+      </div>
     </div>
-    <%= yield %>
-</div>
+    <div id="wrap" style="margin-left: 250px;">
+      <%= yield %>
+    </div>
+<% end %>
+<% if !user_signed_in?%>
+    <div id="wrap">
+        <div id="header">
+            <div id="authentication">
+                <%=link_to "Log In", new_post_path, class:'authenticate' %>
+                <%=link_to "Sign Up", new_post_path, class:'authenticate'%>
+            </div>
+        </div>
+        <%= yield %>
+    </div>
+<% end %>
 </body>
 </html>
