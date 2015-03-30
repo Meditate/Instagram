@@ -41,6 +41,7 @@ a {
       height: 100px;
       position:absolute;
       background-color: lavender;
+      overflow: hidden;
       top:2em;
       left:28%;
       border-radius: 100%;
@@ -92,13 +93,21 @@ a {
   }
   .logo{
     position: absolute;
-    margin-left:-100px;
+    margin-left:-200px;
+    background-color: #778899;
+    height: 100%;
+    top:0;
     left:50%;
     text-align: center;
-    width:200px;
+    width:400px;
+
     font-family:Arial;
     color:#F7F7F7;
     font-size: 2em;
+    &:hover{
+      text-decoration: none;
+      color:lavender;
+    }
   }
   #authentication{
     float:right;
@@ -121,9 +130,12 @@ a {
     border-radius: 3px;
     box-shadow: 0 0 5px -3px;
     .user_id{
+      color:whitesmoke;
+      text-align: right;
+      font-size: 1em;
+      padding: .2em;
       background-color: #A2B5CD;
       border-radius: 3px 3px 0px 0px;
-      height:20px;
     }
     .post {
       margin:0px 0px 50px 0px;
