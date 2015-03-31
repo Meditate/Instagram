@@ -128,15 +128,19 @@ a {
     margin:1em auto;
     border-radius: 3px;
     box-shadow: 0 0 5px -3px;
-    .user_id{
-      color:whitesmoke;
-      text-align: right;
-      font-size: 1em;
+    .post_header{
       padding: .2em;
       background-color: #A2B5CD;
       border-radius: 3px 3px 0px 0px;
-      .dislike_count{
-      }
+      color:whitesmoke;
+      padding: .2em;
+    }
+    .dislike_count{
+      position:absolute;
+    }
+    .user_id{
+      text-align: right;
+      font-size: 1em;
     }
     .post {
       margin:0px 0px 50px 0px;

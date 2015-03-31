@@ -1,11 +1,14 @@
 - @posts.each do |post|
   .container
     .post
-      .user_id
-        =post.user_id
+      .post_header
+
         .dislike_count
           =post.dislike_count
           dislikes
+        .user_id
+          =post.user_id
+
       .photo
         =image_tag post.photo, size: "400x400"
       .description
