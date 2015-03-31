@@ -3,11 +3,14 @@
     .post
       .user_id
         =post.user_id
-        =post.dislike_count
+        .dislike_count
+          =post.dislike_count
+          dislikes
       .photo
         =image_tag post.photo, size: "400x400"
       .description
         =post.description
     .commands
       =link_to 'Show',post
+      =link_to 'dislike', dislike_post_path(post)
 
