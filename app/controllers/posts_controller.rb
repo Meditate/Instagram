@@ -13,6 +13,11 @@ class PostsController < ApplicationController
   def show
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
+  end
   # GET /posts/new
   def new
     @post = Post.new

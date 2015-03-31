@@ -15,5 +15,6 @@
         =post.description
     .commands
       =link_to 'Show',post
+      = link_to 'Delete', post_path(post), method: :delete
       =link_to 'dislike', dislike_post_path(post)
 
