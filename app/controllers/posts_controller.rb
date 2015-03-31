@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :dislike]
   before_action :authenticate_user!, except: [:index, :show]
 
   # GET /posts
@@ -19,6 +19,11 @@ class PostsController < ApplicationController
   end
 
   def dislike
+    if @post.dislike_count.nil?
+      @post.dislike_count = 0
+    end
+    @post.dislike_count=@post.dislike_count + 1
+    @post.save
     redirect_to posts_path
   end
 
