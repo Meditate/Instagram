@@ -16,7 +16,7 @@
     <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
     <%= f.input :photo, required: true %>
     <%= f.hidden_field :photo_cache %>
-    <%=image_tag @user.photo, style: "height:400px; width:400px;", alt: ""%>
+    <%=image_tag @user.photo, style: "width:400px;", alt: ""%>
     <%= f.input :about %>
   </div>
 

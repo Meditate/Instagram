@@ -18,6 +18,10 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def dislike
+    redirect_to posts_path
+  end
+
   def edit
   end
 
